@@ -17,16 +17,25 @@ This module contains optimizers for the standard :mod:`QNode` class, which uses 
 
 # Python optimizers that are available in PennyLane
 # listed in alphabetical order to avoid circular imports
-from .autograd.adagrad import AdagradOptimizer
-from .autograd.adam import AdamOptimizer
-from .autograd.gradient_descent import GradientDescentOptimizer
-from .autograd.momentum import MomentumOptimizer
-from .autograd.nesterov_momentum import NesterovMomentumOptimizer
-from .autograd.rms_prop import RMSPropOptimizer
-from .autograd.qng import QNGOptimizer
-from .autograd.rotosolve import RotosolveOptimizer
-from .autograd.rotoselect import RotoselectOptimizer
-from .tf.qngtf import QNGOptimizerTF
-from .tf.rotosolvetf import RotosolveOptimizerTF
-from .torch.qngtorch import QNGOptimizerTorch
-from .torch.rotosolvetorch import RotosolveOptimizerTorch
+from .adagrad import AdagradOptimizer
+from .adam import AdamOptimizer
+from .gradient_descent import GradientDescentOptimizer
+from .momentum import MomentumOptimizer
+from .nesterov_momentum import NesterovMomentumOptimizer
+from .rms_prop import RMSPropOptimizer
+from .qng import QNGOptimizer
+from .rotosolve import RotosolveOptimizer
+from .rotoselect import RotoselectOptimizer
+
+# Optimizers to display in the docs
+__all__ = [
+    "AdagradOptimizer",
+    "AdamOptimizer",
+    "GradientDescentOptimizer",
+    "MomentumOptimizer",
+    "NesterovMomentumOptimizer",
+    "RMSPropOptimizer",
+    "QNGOptimizer",
+    "RotosolveOptimizer",
+    "RotoselectOptimizer"
+]

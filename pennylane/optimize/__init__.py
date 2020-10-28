@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 r"""
-This module contains optimizers for the standard :mod:`QNode` class, which uses the NumPy interface.
+This module contains optimizers for the standard :mod:`QNode` class, for all the available interfaces.
 """
 
 # Python optimizers that are available in PennyLane

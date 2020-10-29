@@ -15,12 +15,11 @@
 # pylint: disable=too-many-branches
 
 import numpy as np
-
+from torch.optim import Optimizer
 from pennylane.utils import _flatten, unflatten
 from pennylane.optimize.autograd.gradient_descent import GradientDescentOptimizer
 
-
-class QNGOptimizerTorch(GradientDescentOptimizer):
+class QNGOptimizerTorch(GradientDescentOptimizer,Optimizer):
     r"""Optimizer with adaptive learning rate, via calculation
     of the diagonal or block-diagonal approximation to the Fubini-Study metric tensor.
     A quantum generalization of natural gradient descent.

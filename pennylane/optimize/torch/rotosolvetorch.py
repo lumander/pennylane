@@ -14,10 +14,10 @@
 """Rotosolve gradient free optimizer"""
 
 import numpy as np
+from torch.optim import Optimizer
 from pennylane.utils import _flatten, unflatten
 
-
-class RotosolveOptimizerTorch:
+class RotosolveOptimizerTorch(Optimizer):
     r"""Rotosolve gradient free optimizer.
 
     The Rotosolve optimizer minimizes an objective function with respect to the parameters of a

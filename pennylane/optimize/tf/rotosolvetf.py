@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Rotosolve gradient free optimizer"""
-
+from __future__ import absolute_import
 import numpy as np
+
+from tensorflow.python.keras.optimizer_v2 import OptimizerV2
 from pennylane.utils import _flatten, unflatten
 
-
-class RotosolveOptimizerTF:
+class RotosolveOptimizerTF(OptimizerV2):
     r"""Rotosolve gradient free optimizer.
 
     The Rotosolve optimizer minimizes an objective function with respect to the parameters of a
@@ -98,7 +99,7 @@ class RotosolveOptimizerTF:
         return unflatten(x_flat, x)
 
     @staticmethod
-    def _rotosolve(objective_fn, x, d):
+    def _rotosolvetf(objective_fn, x, d):
         r"""The rotosolve step for one parameter.
 
         Updates the parameter :math:`\theta_d` based on Equation 1 in

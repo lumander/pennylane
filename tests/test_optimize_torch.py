@@ -17,6 +17,7 @@ Unit tests for the :mod:`pennylane` optimizers.
 # pylint: disable=redefined-outer-name
 import numpy as onp
 import pytest
+import scipy as sp
 
 import pennylane as qml
 from pennylane import numpy as np

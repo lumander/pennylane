@@ -15,10 +15,10 @@
 from __future__ import absolute_import
 import numpy as np
 
-from tensorflow.python.keras.optimizer_v2 import OptimizerV2
+from tensorflow.python.keras.optimizer_v2 import optimizer_v2
 from pennylane.utils import _flatten, unflatten
 
-class RotosolveOptimizerTF(OptimizerV2):
+class RotosolveOptimizerTF(optimizer_v2.OptimizerV2):
     r"""Rotosolve gradient free optimizer.
 
     The Rotosolve optimizer minimizes an objective function with respect to the parameters of a

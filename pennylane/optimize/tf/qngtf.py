@@ -17,12 +17,12 @@ from __future__ import absolute_import
 
 import numpy as np
 
-from tensorflow.python.keras.optimizer_v2 import OptimizerV2
+from tensorflow.python.keras.optimizer_v2 import optimizer_v2
 from pennylane.utils import _flatten, unflatten
 from pennylane.optimize.autograd.gradient_descent import GradientDescentOptimizer
 
 
-class QNGOptimizerTF(GradientDescentOptimizer,OptimizerV2):
+class QNGOptimizerTF(GradientDescentOptimizer,optimizer_v2.OptimizerV2):
     r"""Optimizer with adaptive learning rate, via calculation
     of the diagonal or block-diagonal approximation to the Fubini-Study metric tensor.
     A quantum generalization of natural gradient descent.

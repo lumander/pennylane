@@ -15,8 +15,6 @@
 Unit tests for the :mod:`pennylane` optimizers.
 """
 # pylint: disable=redefined-outer-name
-import itertools as it
-
 import numpy as onp
 import pytest
 
